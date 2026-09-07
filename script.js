@@ -302,3 +302,106 @@ window.addEventListener("load", () => {
     document.body.classList.add("loaded");
 
 });
+
+```javascript
+/* ================================= */
+/* BACKGROUND MUSIC */
+/* ================================= */
+
+/*
+    AS TUAS MÚSICAS FICAM NA PASTA:
+
+    musicas/
+        m1.mp3
+        m2.mp3
+        ...
+        m16.mp3
+
+    ALTERA APENAS OS NOMES ABAIXO.
+*/
+
+const musicas = [
+    { ficheiro: "m1.mp3", nome: "Nome da Música 1" },
+    { ficheiro: "m2.mp3", nome: "Nome da Música 2" },
+    { ficheiro: "m3.mp3", nome: "Nome da Música 3" },
+    { ficheiro: "m4.mp3", nome: "Nome da Música 4" },
+    { ficheiro: "m5.mp3", nome: "Nome da Música 5" },
+    { ficheiro: "m6.mp3", nome: "Nome da Música 6" },
+    { ficheiro: "m7.mp3", nome: "Nome da Música 7" },
+    { ficheiro: "m8.mp3", nome: "Nome da Música 8" },
+    { ficheiro: "m9.mp3", nome: "Nome da Música 9" },
+    { ficheiro: "m10.mp3", nome: "Nome da Música 10" },
+    { ficheiro: "m11.mp3", nome: "Nome da Música 11" },
+    { ficheiro: "m12.mp3", nome: "Nome da Música 12" },
+    { ficheiro: "m13.mp3", nome: "Nome da Música 13" },
+    { ficheiro: "m14.mp3", nome: "Nome da Música 14" },
+    { ficheiro: "m15.mp3", nome: "Nome da Música 15" },
+    { ficheiro: "m16.mp3", nome: "Nome da Música 16" }
+];
+
+const musicAudio = document.getElementById("musicAudio");
+const musicTitle = document.getElementById("musicTitle");
+const musicProgress = document.getElementById("musicProgress");
+
+let musicaAtual = 0;
+let musicaAtivada = false;
+
+function carregarMusica(index, tocar = false) {
+    if (!musicas.length) return;
+
+    musicaAtual = index % musicas.length;
+
+    const musica = musicas[musicaAtual];
+
+    musicTitle.textContent = musica.nome;
+    musicProgress.style.width = "0%";
+
+    musicAudio.src = `musicas/${musica.ficheiro}`;
+    musicAudio.load();
+
+    if (tocar) {
+        const tentativa = musicAudio.play();
+
+        if (tentativa !== undefined) {
+            tentativa.catch(() => {
+                musicaAtivada = false;
+            });
+        }
+    }
+}
+
+function ativarMusica() {
+    if (musicaAtivada) return;
+
+    musicaAtivada = true;
+
+    const tentativa = musicAudio.play();
+
+    if (tentativa !== undefined) {
+        tentativa.catch(() => {
+            musicaAtivada = false;
+        });
+    }
+}
+
+musicAudio.addEventListener("ended", () => {
+    const proximaMusica = (musicaAtual + 1) % musicas.length;
+
+    carregarMusica(proximaMusica, true);
+});
+
+musicAudio.addEventListener("timeupdate", () => {
+    if (!musicAudio.duration) return;
+
+    const percentagem =
+        (musicAudio.currentTime / musicAudio.duration) * 100;
+
+    musicProgress.style.width = `${percentagem}%`;
+});
+
+carregarMusica(0, true);
+
+document.addEventListener("pointerdown", ativarMusica, {
+    once: true
+});
+```
