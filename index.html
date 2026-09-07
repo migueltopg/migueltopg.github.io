@@ -1,343 +1,818 @@
+<!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel — Developer</title>
+    <meta name="description" content="Portfólio de Miguel — Developer de Minecraft e Roblox.">
 
-<title>Miguel — Developer</title>
-@@ -141,10 +140,12 @@ <h1>
+    <link rel="stylesheet" href="style.css">
 
-</div>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
 
+<body>
 
-<div class="code-area">
-
-<div class="code-line">
-<span class="line-number">01</span>
-
-<span>
-<span class="purple">const</span>
-<span class="blue">developer</span>
-@@ -153,49 +154,70 @@ <h1>
-</span>
-</div>
-
-
-<div class="code-line">
-
-<span class="line-number">02</span>
-
-<span class="indent">
-name:
-<span class="green">'Miguel'</span>,
-</span>
-
-</div>
+    <!-- Background -->
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="grid"></div>
+    </div>
 
 
-<div class="code-line">
+    <!-- Navigation -->
+    <header class="navbar">
 
-<span class="line-number">03</span>
+        <!-- MUSIC PLAYER -->
+        <div class="music-player" aria-label="Música ambiente">
+            <img
+                src="images/Musicas.png"
+                alt="Playlist"
+                class="music-player-art"
+            >
 
-<span class="indent">
-role:
-<span class="green">'Developer'</span>,
-</span>
+            <div class="music-player-info">
+                <span class="music-player-label">A tocar</span>
+                <span class="music-player-title" id="musicTitle">Música 1</span>
+            </div>
 
-</div>
+            <div class="music-player-progress" aria-hidden="true">
+                <span id="musicProgress"></span>
+            </div>
 
+            <div class="music-player-time" aria-hidden="true">
+                <span id="musicCurrentTime">0:00</span>
+                <span id="musicDuration">0:00</span>
+            </div>
 
-<div class="code-line">
+            <audio id="musicAudio" preload="auto"></audio>
+        </div>
 
-<span class="line-number">04</span>
+        <a href="#home" class="logo">
+            <span class="logo-symbol">M</span>
+            <span>MIGUEL<span class="logo-dot">.</span></span>
+        </a>
 
-<span class="indent">
-creating:
-<span class="green">'Games & Systems'</span>,
-</span>
+        <nav>
+            <a href="#home" class="nav-link active">Início</a>
+            <a href="#about" class="nav-link">Sobre mim</a>
+            <a href="#projects" class="nav-link">Projetos</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#contact" class="nav-link">Contacto</a>
+        </nav>
 
-</div>
+        <a href="#contact" class="nav-button">
+            <span>Vamos falar</span>
+            <span>↗</span>
+        </a>
 
-
-<div class="code-line">
-
-<span class="line-number">05</span>
-
-<span class="indent">
-passion:
-<span class="green">'Technology'</span>,
-</span>
-
-</div>
-
-
-<div class="code-line">
-
-<span class="line-number">06</span>
-
-<span>
-<span class="yellow">}</span>
-</span>
-
-</div>
-
-<div class="cursor"></div>
-
-</div>
+    </header>
 
 
-<div class="card-bottom">
-<span>Minecraft</span>
-<span>Roblox</span>
-@@ -242,13 +264,15 @@ <h2>
-de projetos que transformam ideias em algo real.
-</p>
+    <main>
+
+        <!-- ============================= -->
+        <!-- HERO -->
+        <!-- ============================= -->
+
+        <section id="home" class="hero section">
+
+            <div class="hero-content">
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    <span>Disponível para projetos</span>
+                </div>
+
+                <p class="hero-small">
+                    DEVELOPER
+                </p>
+
+                <h1>
+                    Transformo ideias em
+                    <span class="gradient-text">experiências.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Olá, sou o <strong>Miguel</strong>.
+                    Sou developer focado em criar experiências,
+                    sistemas e projetos para <strong>Minecraft</strong>,
+                    <strong>Roblox</strong> e web.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="primary-button">
+                        <span>Ver projetos</span>
+                        <span class="arrow">↓</span>
+                    </a>
+
+                    <a href="#contact" class="secondary-button">
+                        Contactar-me
+                    </a>
+
+                </div>
 
 
-<p>
-Tenho experiência a trabalhar com desenvolvimento
-para <strong>Minecraft</strong> e <strong>Roblox</strong>,
-criando sistemas personalizados, experiências de jogo
-e diferentes tipos de projetos.
-</p>
+                <div class="hero-stats">
+
+                    <div class="stat">
+                        <strong>6+</strong>
+                        <span>Meses de experiência</span>
+                    </div>
+
+                    <div class="stat-line"></div>
+
+                    <div class="stat">
+                        <strong>2+</strong>
+                        <span>Projetos</span>
+                    </div>
+
+                    <div class="stat-line"></div>
+
+                    <div class="stat">
+                        <strong>∞</strong>
+                        <span>Ideias</span>
+                    </div>
+
+                </div>
+
+            </div>
 
 
-<p>
-Atualmente sou aluno do <strong>11.º ano do curso
-profissional de Gestão e Programação de Sistemas
-@@ -257,6 +281,7 @@ <h2>
-programação e informática.
-</p>
+            <!-- HERO CARD -->
+
+            <div class="hero-card-wrapper">
+
+                <div class="hero-card">
+
+                    <div class="card-top">
+
+                        <div class="window-buttons">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span class="card-title">miguel.dev</span>
+
+                        <span class="card-status">● ONLINE</span>
+
+                    </div>
 
 
-<p>
-Fora do desenvolvimento, também gosto de jogar
-<strong>Valorant</strong>, <strong>CS2</strong> e
-@@ -269,33 +294,48 @@ <h2>
-<div class="about-info">
+                    <div class="code-area">
 
-<div class="info-box">
+                        <div class="code-line">
+                            <span class="line-number">01</span>
 
-<span class="info-title">Área</span>
-
-<strong>Game & Software Development</strong>
-
-</div>
-
-
-<div class="info-box">
-
-<span class="info-title">Foco</span>
-
-<strong>Minecraft · Roblox · Web</strong>
-
-</div>
+                            <span>
+                                <span class="purple">const</span>
+                                <span class="blue">developer</span>
+                                =
+                                <span class="yellow">{</span>
+                            </span>
+                        </div>
 
 
-<div class="info-box">
+                        <div class="code-line">
 
-<span class="info-title">Em Formação</span>
+                            <span class="line-number">02</span>
 
-<strong>11.º ano · GPSI</strong>
+                            <span class="indent">
+                                name:
+                                <span class="green">'Miguel'</span>,
+                            </span>
 
-</div>
+                        </div>
 
 
-<div class="info-box profile-box">
+                        <div class="code-line">
 
-<div class="profile-info">
+                            <span class="line-number">03</span>
 
-<img
-                                src="profile.png"
+                            <span class="indent">
+                                role:
+                                <span class="green">'Developer'</span>,
+                            </span>
+
+                        </div>
+
+
+                        <div class="code-line">
+
+                            <span class="line-number">04</span>
+
+                            <span class="indent">
+                                creating:
+                                <span class="green">'Games & Systems'</span>,
+                            </span>
+
+                        </div>
+
+
+                        <div class="code-line">
+
+                            <span class="line-number">05</span>
+
+                            <span class="indent">
+                                passion:
+                                <span class="green">'Technology'</span>,
+                            </span>
+
+                        </div>
+
+
+                        <div class="code-line">
+
+                            <span class="line-number">06</span>
+
+                            <span>
+                                <span class="yellow">}</span>
+                            </span>
+
+                        </div>
+
+                        <div class="cursor"></div>
+
+                    </div>
+
+
+                    <div class="card-bottom">
+                        <span>Minecraft</span>
+                        <span>Roblox</span>
+                        <span>Web</span>
+                        <span>●</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- ABOUT -->
+        <!-- ============================= -->
+
+        <section id="about" class="section about">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-number">01 /</span>
+                    <span class="section-label">SOBRE MIM</span>
+                </div>
+
+                <h2>
+                    Mais do que código.<br>
+                    <span>Crio experiências.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p class="large-text">
+                        Sou um <strong>developer</strong> apaixonado por
+                        tecnologia, desenvolvimento de jogos e pela criação
+                        de projetos que transformam ideias em algo real.
+                    </p>
+
+
+                    <p>
+                        Tenho experiência a trabalhar com desenvolvimento
+                        para <strong>Minecraft</strong> e <strong>Roblox</strong>,
+                        criando sistemas personalizados, experiências de jogo
+                        e diferentes tipos de projetos.
+                    </p>
+
+
+                    <p>
+                        Atualmente sou aluno do <strong>11.º ano do curso
+                        profissional de Gestão e Programação de Sistemas
+                        Informáticos (GPSI)</strong>, onde continuo a
+                        desenvolver as minhas capacidades na área da
+                        programação e informática.
+                    </p>
+
+
+                    <p>
+                        Fora do desenvolvimento, também gosto de jogar
+                        <strong>Valorant</strong>, <strong>CS2</strong> e
+                        <strong>Fortnite</strong>.
+                    </p>
+
+                </div>
+
+
+                <div class="about-info">
+
+                    <div class="info-box">
+
+                        <span class="info-title">Área</span>
+
+                        <strong>Game & Software Development</strong>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <span class="info-title">Foco</span>
+
+                        <strong>Minecraft · Roblox · Web</strong>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <span class="info-title">Em Formação</span>
+
+                        <strong>11.º ano · GPSI</strong>
+
+                    </div>
+
+
+                    <div class="info-box profile-box">
+
+                        <div class="profile-info">
+
+                            <img
                                 src="images/profile.png"
-alt="Logo"
-class="profile-image"
->
+                                alt="Logo"
+                                class="profile-image"
+                            >
 
-<div>
+                            <div>
 
-<span class="info-title">Interesses</span>
+                                <span class="info-title">Interesses</span>
 
-<strong>Games & Technology</strong>
+                                <strong>Games & Technology</strong>
 
-</div>
+                            </div>
 
-</div>
-@@ -341,7 +381,7 @@ <h2>
-<div class="project-image minecraft-image">
+                        </div>
 
-<img
-                            src="nelcraft.png"
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- PROJECTS -->
+        <!-- ============================= -->
+
+        <section id="projects" class="section projects">
+
+            <div class="section-heading projects-heading">
+
+                <div>
+                    <span class="section-number">02 /</span>
+                    <span class="section-label">PROJETOS</span>
+                </div>
+
+                <h2>
+                    Algumas coisas que<br>
+                    <span>já construí.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <article class="project-card featured">
+
+                    <div class="project-image minecraft-image">
+
+                        <img
                             src="images/nelcraft.png"
-alt="NelCraft SMP"
-class="project-real-image"
->
-@@ -356,25 +396,33 @@ <h2>
-<div class="project-content">
+                            alt="NelCraft SMP"
+                            class="project-real-image"
+                        >
 
-<div class="project-top">
+                        <div class="minecraft-overlay"></div>
 
-<span>SERVER DEVELOPMENT</span>
-<span>2026</span>
+                        <span class="project-number">01</span>
 
-</div>
+                    </div>
 
 
-<h3>NelCraft SMP</h3>
+                    <div class="project-content">
+
+                        <div class="project-top">
+
+                            <span>SERVER DEVELOPMENT</span>
+                            <span>2026</span>
+
+                        </div>
 
 
-<p>
-Desenvolvimento e configuração de um servidor
-Minecraft com sistemas personalizados,
-economia, clans, crates, claims e muito mais.
-</p>
+                        <h3>NelCraft SMP</h3>
 
 
-<div class="tags">
-
-<span>Paper</span>
-<span>Java</span>
-<span>LuckPerms</span>
-<span>PlaceholderAPI</span>
-
-</div>
+                        <p>
+                            Desenvolvimento e configuração de um servidor
+                            Minecraft com sistemas personalizados,
+                            economia, clans, crates, claims e muito mais.
+                        </p>
 
 
-<a href="#" class="project-link">
-Ver projeto <span>↗</span>
-</a>
-@@ -394,7 +442,7 @@ <h3>NelCraft SMP</h3>
-<span class="project-number">02</span>
+                        <div class="tags">
 
-<img
-                            src="roblox.png"
+                            <span>Paper</span>
+                            <span>Java</span>
+                            <span>LuckPerms</span>
+                            <span>PlaceholderAPI</span>
+
+                        </div>
+
+
+                        <a href="#" class="project-link">
+                            Ver projeto <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 2 -->
+
+                <article class="project-card">
+
+                    <div class="project-image dark-image">
+
+                        <span class="project-number">02</span>
+
+                        <img
                             src="images/roblox.png"
-alt="Roblox Project"
-class="project-real-image"
->
-@@ -405,24 +453,32 @@ <h3>NelCraft SMP</h3>
-<div class="project-content">
+                            alt="Roblox Project"
+                            class="project-real-image"
+                        >
 
-<div class="project-top">
-
-<span>GAME DEVELOPMENT</span>
-<span>2026</span>
-
-</div>
+                    </div>
 
 
-<h3>Roblox Project</h3>
+                    <div class="project-content">
+
+                        <div class="project-top">
+
+                            <span>GAME DEVELOPMENT</span>
+                            <span>2026</span>
+
+                        </div>
 
 
-<p>
-Projeto desenvolvido para Roblox, explorando
-criação de jogos, sistemas personalizados,
-gameplay e experiências para jogadores.
-</p>
+                        <h3>Roblox Project</h3>
 
 
-<div class="tags">
-
-<span>Roblox Studio</span>
-<span>Lua</span>
-<span>Game Development</span>
-
-</div>
+                        <p>
+                            Projeto desenvolvido para Roblox, explorando
+                            criação de jogos, sistemas personalizados,
+                            gameplay e experiências para jogadores.
+                        </p>
 
 
-<a href="#" class="project-link">
-Ver projeto <span>↗</span>
-</a>
-@@ -480,6 +536,7 @@ <h3>Java</h3>
-</div>
+                        <div class="tags">
+
+                            <span>Roblox Studio</span>
+                            <span>Lua</span>
+                            <span>Game Development</span>
+
+                        </div>
 
 
+                        <a href="#" class="project-link">
+                            Ver projeto <span>↗</span>
+                        </a>
 
-<div class="skill-card">
+                    </div>
 
-<div class="skill-icon">◇</div>
-@@ -498,6 +555,7 @@ <h3>Roblox Studio</h3>
-</div>
+                </article>
 
 
+            </div>
 
-<div class="skill-card">
-
-<div class="skill-icon">{ }</div>
-@@ -516,6 +574,7 @@ <h3>JavaScript</h3>
-</div>
+        </section>
 
 
 
-<div class="skill-card">
+        <!-- ============================= -->
+        <!-- SKILLS -->
+        <!-- ============================= -->
 
-<div class="skill-icon">#</div>
-@@ -607,6 +666,7 @@ <h2>
+        <section id="skills" class="section skills">
 
-<div class="modal-backdrop" id="modalBackdrop"></div>
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-number">03 /</span>
+                    <span class="section-label">SKILLS</span>
+                </div>
+
+                <h2>
+                    Ferramentas que<br>
+                    <span>uso para criar.</span>
+                </h2>
+
+            </div>
 
 
-<div class="modal-box">
-
-<button
-@@ -634,7 +694,7 @@ <h3>
+            <div class="skills-grid">
 
 
-<p>
-                Podes entrar em 
+                <div class="skill-card">
+
+                    <div class="skill-icon">☕</div>
+
+                    <h3>Java</h3>
+
+                    <p>
+                        Desenvolvimento de Servers,
+                        de plugins, sistemas e funcionalidades.
+                    </p>
+
+                    <div class="skill-line">
+                        <span style="width: 86%;"></span>
+                    </div>
+
+                </div>
+
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">◇</div>
+
+                    <h3>Roblox Studio</h3>
+
+                    <p>
+                        Criação de jogos, sistemas e
+                        experiências no Roblox.
+                    </p>
+
+                    <div class="skill-line">
+                        <span style="width: 67%;"></span>
+                    </div>
+
+                </div>
+
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">{ }</div>
+
+                    <h3>JavaScript</h3>
+
+                    <p>
+                        Desenvolvimento web e criação
+                        de interfaces interativas.
+                    </p>
+
+                    <div class="skill-line">
+                        <span style="width: 51%;"></span>
+                    </div>
+
+                </div>
+
+
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">#</div>
+
+                    <h3>HTML & CSS</h3>
+
+                    <p>
+                        Criação de websites modernos,
+                        responsivos e personalizados.
+                    </p>
+
+                    <div class="skill-line">
+                        <span style="width: 65%;"></span>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- CONTACT -->
+        <!-- ============================= -->
+
+        <section id="contact" class="section contact">
+
+            <div class="contact-box">
+
+                <div class="contact-decoration"></div>
+
+                <span class="section-label">04 / CONTACTO</span>
+
+                <h2>
+                    Tens uma ideia?
+                    <br>
+                    <span>Vamos construí-la.</span>
+                </h2>
+
+                <p>
+                    Se tens um projeto, uma ideia ou simplesmente queres
+                    entrar em contacto comigo, fala comigo.
+                </p>
+
+
+                <div class="contact-buttons">
+
+                    <!-- IMPORTANTE:
+                         O botão já não abre o email.
+                         Abre o modal abaixo.
+                    -->
+
+                    <button
+                        type="button"
+                        class="primary-button contact-open-button"
+                        id="openContact"
+                    >
+                        Enviar email
+                        <span>↗</span>
+                    </button>
+
+
+                    <a
+                        href="#"
+                        class="discord-button"
+                        id="discordButton"
+                    >
+                        Discord
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ============================= -->
+    <!-- EMAIL MODAL -->
+    <!-- ============================= -->
+
+    <div class="contact-modal" id="contactModal">
+
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+
+
+        <div class="modal-box">
+
+            <button
+                class="modal-close"
+                id="closeContact"
+                aria-label="Fechar"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-icon">
+                @
+            </div>
+
+
+            <span class="section-label">
+                CONTACTO
+            </span>
+
+
+            <h3>
+                Vamos conversar.
+            </h3>
+
+
+            <p>
                 Podes entrar em
-contacto comigo através do Gmail.
-</p>
-
-@@ -645,6 +705,7 @@ <h3>
-teuemail@example.com
-</span>
+                contacto comigo através do Gmail.
+            </p>
 
 
-<button
-type="button"
-id="copyEmail"
-@@ -653,6 +714,7 @@ <h3>
->
+            <div class="email-copy-box">
 
-<!-- Copy icon -->
-
-<svg
-width="18"
-height="18"
-@@ -663,6 +725,7 @@ <h3>
-stroke-linecap="round"
-stroke-linejoin="round"
->
-
-<rect
-x="9"
-y="9"
-@@ -672,11 +735,14 @@ <h3>
-ry="2"
-></rect>
+                <span id="emailText">
+                    teuemail@example.com
+                </span>
 
 
-<path
-d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
-></path>
+                <button
+                    type="button"
+                    id="copyEmail"
+                    class="copy-button"
+                    aria-label="Copiar email"
+                >
 
-</svg>
+                    <!-- Copy icon -->
+
+                    <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+
+                        <rect
+                            x="9"
+                            y="9"
+                            width="13"
+                            height="13"
+                            rx="2"
+                            ry="2"
+                        ></rect>
 
 
-<span>Copiar</span>
+                        <path
+                            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                        ></path>
 
-</button>
-@@ -707,10 +773,12 @@ <h3>
-MIGUEL<span>.</span>
-</div>
-
-
-<p>
-Developer · Portugal
-</p>
+                    </svg>
 
 
-<p class="copyright">
-© 2026 Miguel. Todos os direitos reservados.
-</p>
+                    <span>Copiar</span>
+
+                </button>
+
+            </div>
+
+
+            <div
+                class="copy-success"
+                id="copySuccess"
+            >
+                ✓ Email copiado para a área de transferência
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            MIGUEL<span>.</span>
+        </div>
+
+
+        <p>
+            Developer · Portugal
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Miguel. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
