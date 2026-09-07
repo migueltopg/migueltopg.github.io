@@ -1549,6 +1549,122 @@ footer {
 }
 
 
+
+/* ================================= */
+/* MUSIC PLAYER */
+/* ================================= */
+
+.music-player {
+    position: fixed;
+    top: 29px;
+    left: max(24px, calc((100vw - 1200px) / 2 + 18px));
+    width: 205px;
+    z-index: 101;
+    padding: 8px;
+    border: 1px solid rgba(214,168,79,0.22);
+    border-radius: 14px;
+    background: rgba(10, 9, 7, 0.78);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.28);
+    transform: translateX(-225px);
+    transition: 0.3s ease;
+}
+
+.music-player:hover {
+    border-color: rgba(214,168,79,0.38);
+    transform: translateX(-225px) translateY(-2px);
+}
+
+.music-player-art {
+    width: 52px;
+    height: 52px;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+    transform: rotate(-4deg);
+    border: 1px solid rgba(214,168,79,0.18);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.music-player-info {
+    min-width: 0;
+    margin-top: 8px;
+}
+
+.music-player-label {
+    display: block;
+    margin-bottom: 3px;
+    color: #625c54;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.music-player-title {
+    display: block;
+    overflow: hidden;
+    color: #ddd6cb;
+    font-size: 11px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.music-player-progress {
+    width: 100%;
+    height: 3px;
+    margin-top: 9px;
+    overflow: hidden;
+    border-radius: 99px;
+    background: #28231d;
+}
+
+.music-player-progress span {
+    display: block;
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--gold-light);
+    box-shadow: 0 0 8px rgba(214,168,79,0.45);
+    transition: width 0.1s linear;
+}
+
+.music-player-time {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    color: #5e5851;
+    font-family: monospace;
+    font-size: 7px;
+}
+
+@media (max-width: 950px) {
+    .music-player {
+        left: 20px;
+        top: 111px;
+        width: 190px;
+        transform: none;
+    }
+
+    .music-player:hover {
+        transform: translateY(-2px);
+    }
+}
+
+@media (max-width: 700px) {
+    .music-player {
+        top: 106px;
+        left: 20px;
+        width: 175px;
+    }
+
+    .music-player-art {
+        width: 46px;
+        height: 46px;
+    }
+}
+
 /* ============================= */
 /* ANIMATIONS */
 /* ============================= */
