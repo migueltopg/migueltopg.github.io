@@ -28,6 +28,31 @@
     <!-- Navigation -->
     <header class="navbar">
 
+        <!-- MUSIC PLAYER -->
+        <div class="music-player" aria-label="Música ambiente">
+            <img
+                src="images/Musicas.png"
+                alt="Playlist"
+                class="music-player-art"
+            >
+
+            <div class="music-player-info">
+                <span class="music-player-label">A tocar</span>
+                <span class="music-player-title" id="musicTitle">Música 1</span>
+            </div>
+
+            <div class="music-player-progress" aria-hidden="true">
+                <span id="musicProgress"></span>
+            </div>
+
+            <div class="music-player-time" aria-hidden="true">
+                <span id="musicCurrentTime">0:00</span>
+                <span id="musicDuration">0:00</span>
+            </div>
+
+            <audio id="musicAudio" preload="auto"></audio>
+        </div>
+
         <a href="#home" class="logo">
             <span class="logo-symbol">M</span>
             <span>MIGUEL<span class="logo-dot">.</span></span>
