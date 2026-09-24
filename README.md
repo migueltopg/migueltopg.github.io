@@ -1,6 +1,6 @@
-# NELSTORE — Loja de negociação
+# Alcobaça Store — Loja de seleção e negociação
 
-Projeto estático pensado para GitHub Pages + Supabase.
+Projeto estático profissional pensado para GitHub Pages + Supabase, com identidade visual clara e editorial.
 
 ## Ficheiros
 

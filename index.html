@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alcobaça Store — seleção de produtos, atendimento privado e negociação direta em Portugal.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Alcobaça Store | Seleção & atendimento</title>
+  <link rel="icon" type="image/png" href="images/profile.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-progress" id="pageProgress"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Alcobaça Store — início">
+        <span class="brand-logo"><img src="images/profile.png" alt="Alcobaça Store"></span>
+        <span class="brand-text">
+          <strong>Alcobaça Store</strong>
+          <small>seleção & atendimento</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#produtos">Produtos</a>
+        <a href="#processo">Como funciona</a>
+        <a href="#empresa">A nossa abordagem</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="header-link hidden" id="openTicketsBtn" type="button">Os meus pedidos</button>
+        <button class="header-link hidden staff-link" id="openStaffBtn" type="button">Área de gestão</button>
+        <button class="account-trigger" id="accountBtn" type="button" aria-expanded="false" aria-controls="accountPopover">
+          <span class="account-avatar" id="accountAvatar">A</span>
+          <span class="account-trigger-copy">
+            <small id="accountState">Entrar</small>
+            <strong id="accountName">Conta</strong>
+          </span>
+          <span class="account-chevron">⌄</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <div class="container mobile-nav-inner">
+        <a href="#produtos">Produtos</a>
+        <a href="#processo">Como funciona</a>
+        <a href="#empresa">A nossa abordagem</a>
+        <button id="mobileTicketsBtn" class="hidden" type="button">Os meus pedidos</button>
+        <button id="mobileStaffBtn" class="hidden" type="button">Área de gestão</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero section-pad">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="eyebrow-line"></span> VENDA EXCLUSIVA EM PORTUGAL</div>
+          <h1>Uma loja pensada para comprar com <em>confiança.</em></h1>
+          <p class="hero-lead">Selecionamos produtos com critérios simples: apresentação cuidada, informação clara e atendimento direto. Sem processos desnecessários.</p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="#produtos">Ver produtos <span>↗</span></a>
+            <button class="btn btn-light" id="heroAccountBtn" type="button">Criar conta</button>
+          </div>
+          <div class="hero-meta">
+            <div><strong>01</strong><span>Seleção cuidada</span></div>
+            <div><strong>02</strong><span>Negociação privada</span></div>
+            <div><strong>03</strong><span>Entrega em Portugal</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1">
+          <div class="hero-visual-backdrop"></div>
+          <div class="featured-product" id="featuredProductCard">
+            <div class="featured-label">EM DESTAQUE</div>
+            <div class="featured-image-wrap">
+              <img id="featuredProductImage" src="images/exemplo.png" alt="Produto em destaque">
+            </div>
+            <div class="featured-info">
+              <span id="featuredProductCategory">Seleção</span>
+              <h2 id="featuredProductName">Produto Exemplo</h2>
+              <p id="featuredProductDescription">Produto de demonstração para a Alcobaça Store.</p>
+              <div class="featured-bottom">
+                <div><small>Preço de referência</small><strong id="featuredProductPrice">29,90 €</strong></div>
+                <button id="featuredOpenBtn" type="button">Ver detalhe <span>→</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="floating-note note-top"><strong>Atendimento direto</strong><span>Fala connosco antes de avançar.</span></div>
+          <div class="floating-note note-bottom"><span class="status-dot"></span><strong>Operação ativa</strong><span>Portugal</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-strip-inner">
+        <span>ALCOBAÇA STORE</span>
+        <span>ATENDIMENTO PRIVADO</span>
+        <span>VENDA EM PORTUGAL</span>
+        <span>PREÇOS NEGOCIÁVEIS</span>
+      </div>
+    </section>
+
+    <section id="produtos" class="section-pad catalog-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> CATÁLOGO</div>
+            <h2>Produtos selecionados.</h2>
+            <p>Consulta cada produto, vê os detalhes e inicia uma conversa privada com a equipa quando quiseres discutir o preço.</p>
+          </div>
+          <div class="catalog-toolbar">
+            <span id="productCount" class="catalog-count">0 produtos</span>
+            <label class="search-field">
+              <span>⌕</span>
+              <input id="productSearch" type="search" placeholder="Pesquisar" autocomplete="off">
+            </label>
+          </div>
+        </div>
+
+        <div id="productGrid" class="product-grid"></div>
+        <div id="emptyProducts" class="empty-panel hidden">
+          <span class="empty-symbol">⌕</span>
+          <h3>Não encontrámos resultados.</h3>
+          <p>Tenta pesquisar por outro nome ou categoria.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="processo" class="process-section section-pad">
+      <div class="container">
+        <div class="section-header narrow reveal">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> PROCESSO</div>
+            <h2>Direto, claro e sem ruído.</h2>
+            <p>A experiência foi desenhada para que o catálogo seja simples e a conversa aconteça quando é realmente necessária.</p>
+          </div>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card reveal"><span class="process-number">01</span><div class="process-icon">01</div><h3>Escolhe</h3><p>Entra no produto que te interessa e consulta a informação disponível.</p></article>
+          <article class="process-card reveal delay-1"><span class="process-number">02</span><div class="process-icon">02</div><h3>Conversa</h3><p>Abre um pedido privado e fala diretamente com um membro da nossa equipa.</p></article>
+          <article class="process-card reveal delay-2"><span class="process-number">03</span><div class="process-icon">03</div><h3>Combina</h3><p>Discute preço, condições e disponibilidade até existir um acordo claro.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="empresa" class="section-pad approach-section">
+      <div class="container approach-grid">
+        <div class="approach-panel reveal">
+          <span class="panel-kicker">A NOSSA ABORDAGEM</span>
+          <div class="panel-quote">“<span>Menos complicação.<br>Mais conversa.</span>”</div>
+        </div>
+        <div class="approach-copy reveal delay-1">
+          <div class="eyebrow"><span class="eyebrow-line"></span> ALCOBAÇA STORE</div>
+          <h2>Uma experiência simples, com um lado humano.</h2>
+          <p>A loja não foi pensada para empurrar uma compra automática. Queremos que tenhas a informação, que possas colocar dúvidas e que exista alguém responsável do outro lado.</p>
+          <div class="approach-list">
+            <div><span>✓</span><p>Produtos apresentados de forma clara e profissional.</p></div>
+            <div><span>✓</span><p>Negociação privada através de pedidos autenticados.</p></div>
+            <div><span>✓</span><p>Venda destinada exclusivamente a Portugal.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section-pad">
+      <div class="container contact-card reveal">
+        <div>
+          <div class="eyebrow light"><span class="eyebrow-line"></span> ATENDIMENTO</div>
+          <h2>Precisas de esclarecer alguma coisa?</h2>
+          <p>Entra na tua conta e abre um pedido privado. A nossa equipa responde diretamente no site.</p>
+        </div>
+        <button id="supportTicketBtn" class="btn btn-white" type="button">Abrir pedido <span>→</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand-wrap">
+        <a class="brand footer-brand" href="#inicio">
+          <span class="brand-logo"><img src="images/profile.png" alt="Alcobaça Store"></span>
+          <span class="brand-text"><strong>Alcobaça Store</strong><small>seleção & atendimento</small></span>
+        </a>
+        <p>Produtos vendidos exclusivamente em Portugal.</p>
+      </div>
+      <div class="footer-column"><span>Explorar</span><a href="#produtos">Produtos</a><a href="#processo">Como funciona</a><a href="#empresa">A nossa abordagem</a></div>
+      <div class="footer-column"><span>Conta</span><button id="footerAccountBtn" type="button">A minha conta</button><button id="footerTicketsBtn" type="button">Os meus pedidos</button></div>
+      <div class="footer-column"><span>Informação</span><button id="privacyBtn" type="button">Privacidade</button><button id="cookieSettingsBtn" type="button">Preferências de cookies</button></div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="currentYear"></span> Alcobaça Store</span>
+      <span>Portugal · Atendimento digital</span>
+    </div>
+  </footer>
+
+  <!-- Account popover -->
+  <div class="account-popover hidden" id="accountPopover">
+    <div id="popoverGuest">
+      <span class="popover-label">ÁREA PESSOAL</span>
+      <h3>Entra na tua conta.</h3>
+      <p>Guarda os teus pedidos e continua as conversas onde as deixaste.</p>
+      <button id="popoverLoginBtn" class="btn btn-dark btn-full" type="button">Entrar ou criar conta</button>
+    </div>
+    <div id="popoverUser" class="hidden">
+      <div class="popover-profile"><span id="popoverAvatar" class="account-avatar large">A</span><div><strong id="popoverName">Utilizador</strong><span id="popoverEmail">email</span></div></div>
+      <div class="popover-actions"><button id="popoverTicketsBtn" type="button">Os meus pedidos <span>→</span></button><button id="logoutBtn" type="button">Terminar sessão</button></div>
+    </div>
+  </div>
+
+  <!-- Auth -->
+  <div class="overlay hidden" id="authOverlay" aria-hidden="true">
+    <div class="auth-modal">
+      <button class="close-btn" id="closeAuthBtn" type="button" aria-label="Fechar">×</button>
+      <div class="auth-brand"><span class="brand-logo"><img src="images/profile.png" alt="Alcobaça Store"></span><div><strong>Alcobaça Store</strong><small>acesso seguro</small></div></div>
+      <div id="authStart" class="auth-step">
+        <div class="auth-heading"><div class="eyebrow"><span class="eyebrow-line"></span> CONTA</div><h2>Bem-vindo.</h2><p>Entra rapidamente com a tua conta Google ou através do teu email.</p></div>
+        <button id="googleLoginBtn" class="google-btn" type="button"><span class="google-mark">G</span><span>Continuar com Google</span></button>
+        <div class="auth-or"><span>ou</span></div>
+        <form id="emailForm" class="form-stack"><label for="emailInput">Endereço de email</label><input id="emailInput" type="email" required autocomplete="email" placeholder="nome@email.com"><button class="btn btn-dark btn-full" type="submit">Enviar código <span>→</span></button></form>
+        <p class="form-hint">Enviamos um código de utilização única. Não precisas de criar uma palavra-passe.</p>
+      </div>
+      <div id="authOtp" class="auth-step hidden">
+        <button id="backToEmailBtn" class="text-back" type="button">← Alterar email</button>
+        <div class="auth-heading"><div class="eyebrow"><span class="eyebrow-line"></span> VERIFICAÇÃO</div><h2>Confirma o teu email.</h2><p>Introduz o código enviado para <strong id="otpEmailLabel"></strong>.</p></div>
+        <form id="otpForm" class="form-stack"><label for="otpInput">Código de 6 dígitos</label><input id="otpInput" class="otp-input" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" placeholder="000000" required><button class="btn btn-dark btn-full" type="submit">Confirmar acesso <span>✓</span></button></form>
+        <button id="resendOtpBtn" class="text-link" type="button">Reenviar código</button><p id="otpTimer" class="form-hint"></p>
+      </div>
+      <div id="authMessage" class="form-message" role="status"></div>
+      <p class="legal-note">Ao continuar, aceitas os termos de utilização e a política de privacidade aplicáveis à Alcobaça Store.</p>
+    </div>
+  </div>
+
+  <!-- Product modal -->
+  <div class="overlay hidden" id="productModal" aria-hidden="true">
+    <div class="product-modal">
+      <button class="close-btn" id="closeProductModalBtn" type="button" aria-label="Fechar">×</button>
+      <div class="product-modal-media" id="productGallery"></div>
+      <div class="product-modal-info">
+        <div class="product-meta-row"><span id="productBadge">SELEÇÃO</span><span id="productAvailability">Disponível</span></div>
+        <div class="eyebrow"><span class="eyebrow-line"></span> <span id="productCategory">PRODUTO</span></div>
+        <h2 id="productTitle">Produto</h2>
+        <p id="productDescription">Descrição.</p>
+        <div class="product-price-large"><small>Preço de referência</small><strong id="productPrice">0,00 €</strong></div>
+        <div class="product-detail-list"><div><span>Envio</span><strong id="productShipping">Portugal</strong></div><div><span>Negociação</span><strong>Pedido privado</strong></div><div><span>Venda</span><strong>Portugal</strong></div></div>
+        <button id="discussPriceBtn" class="btn btn-dark btn-full" type="button">Discutir preço <span>↗</span></button>
+        <button id="closeProductTextBtn" class="btn btn-text btn-full" type="button">Voltar ao catálogo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- User tickets drawer -->
+  <div class="drawer-layer hidden" id="ticketDrawer" aria-hidden="true">
+    <aside class="drawer-panel">
+      <div class="drawer-head"><div><span class="drawer-kicker">ATENDIMENTO</span><h2 id="drawerTitle">Os meus pedidos</h2></div><button class="close-btn small" id="closeTicketDrawerBtn" type="button" aria-label="Fechar">×</button></div>
+      <div id="ticketList" class="ticket-list"></div>
+      <div id="ticketComposer" class="ticket-composer hidden"><button id="backToTicketListBtn" class="text-back" type="button">← Todos os pedidos</button><div id="activeTicketMeta" class="active-ticket-meta"></div><div id="ticketMessages" class="ticket-messages"></div><form id="ticketMessageForm" class="message-form"><input id="ticketMessageInput" type="text" maxlength="1200" placeholder="Escreve uma mensagem..." autocomplete="off" required><button class="send-button" type="submit" aria-label="Enviar">→</button></form></div>
+      <div id="newTicketArea" class="drawer-bottom"><button id="newSupportTicketBtn" class="btn btn-light btn-full" type="button">+ Novo pedido</button></div>
+    </aside>
+  </div>
+
+  <!-- Staff drawer -->
+  <div class="drawer-layer hidden" id="staffDrawer" aria-hidden="true">
+    <aside class="drawer-panel staff-panel">
+      <div class="drawer-head"><div><span class="drawer-kicker">BACK OFFICE</span><h2>Área de gestão</h2></div><button class="close-btn small" id="closeStaffDrawerBtn" type="button" aria-label="Fechar">×</button></div>
+      <div class="staff-tabs"><button class="staff-tab active" data-staff-view="dashboard" type="button">Resumo</button><button class="staff-tab" data-staff-view="tickets" type="button">Pedidos</button></div>
+      <div id="staffDashboardView" class="staff-view"></div><div id="staffTicketsView" class="staff-view hidden"></div>
+      <div id="staffChatView" class="staff-view hidden"><button id="backToStaffTicketsBtn" class="text-back" type="button">← Todos os pedidos</button><div id="staffActiveTicketMeta" class="active-ticket-meta"></div><div id="staffTicketMessages" class="ticket-messages"></div><form id="staffMessageForm" class="message-form"><input id="staffMessageInput" type="text" maxlength="1200" placeholder="Responder ao utilizador..." autocomplete="off" required><button class="send-button" type="submit" aria-label="Enviar">→</button></form></div>
+    </aside>
+  </div>
+
+  <!-- Cookie -->
+  <div class="cookie-banner hidden" id="cookieBanner">
+    <div class="cookie-banner-copy"><span class="cookie-symbol">◌</span><div><strong>Preferências de privacidade</strong><p>Utilizamos tecnologias essenciais para manter a sessão e guardar as tuas preferências. Não utilizamos publicidade comportamental.</p></div></div>
+    <div class="cookie-actions"><button id="cookieEssentialBtn" class="btn btn-text" type="button">Apenas essenciais</button><button id="cookieAcceptBtn" class="btn btn-dark" type="button">Aceitar</button></div>
+  </div>
+
+  <div class="overlay hidden" id="privacyModal" aria-hidden="true">
+    <div class="simple-modal"><button class="close-btn" id="closePrivacyBtn" type="button" aria-label="Fechar">×</button><div class="eyebrow"><span class="eyebrow-line"></span> PRIVACIDADE</div><h2>Privacidade</h2><p>A Alcobaça Store utiliza os dados necessários para autenticação, gestão da conta e atendimento através de pedidos privados. As conversas ficam limitadas ao utilizador e à equipa de gestão autorizada.</p><p>A autenticação pode ser feita através do fornecedor Google ou de códigos de utilização única enviados por email, conforme a configuração do projeto.</p><p>Os produtos são vendidos exclusivamente em Portugal. Antes de qualquer compra, preço, disponibilidade e condições de entrega devem ser confirmados diretamente com a equipa.</p><p class="form-hint">Este conteúdo é uma base técnica e deverá ser ajustado às informações legais concretas do negócio.</p></div>
+  </div>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
