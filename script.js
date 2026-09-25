@@ -7,7 +7,7 @@
 
 const CONFIG = {
   STORE_NAME: 'Alcobaça Store',
-  SUPABASE_URL: 'https://YOUR-PROJECT.supabase.co',
+  SUPABASE_URL: 'https://xdnqsphhpllnxtjqzbbj.supabase.co',
   SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhkbnFzcGhocGxsbnh0anF6YmJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAyNzg1NTUsImV4cCI6MjEwNTg1NDU1NX0.defirKawMwf9UTdZwJ_NNXIOQ6jLvSp86gdcB4o2-Gg',
   CURRENCY: 'EUR',
   LOCALE: 'pt-PT',
